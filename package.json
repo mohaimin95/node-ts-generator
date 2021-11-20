@@ -1,5 +1,5 @@
 {
-  "name": "node-ts-generator",
+  "name": "@mohaimin95/node-ts-generator",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "bin": {
     "node-ts": "./index.js"
   },
-  "author": "",
+  "author": "Abdul Mohaimin",
   "license": "ISC",
   "dependencies": {
     "fs-extra": "^10.0.0",

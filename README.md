@@ -4,6 +4,10 @@
 
 This library generates a node JS backend application with Typescript, ESLint, Prettier preconfigured. It enables you/team to write a good looking code with good quality.
 
+## Contribution
+
+Anyone can contribute this project (https://github.com/mohaimin95/node-ts-generator)
+
 ## Features
 
 - Predefined folder structure inspired from the Node JS experts.
@@ -23,7 +27,7 @@ npm i -g @mohaimin95/node-ts-generator
 Create a project folder and generate the application using the command below
 
 ```sh
-@mohaimin95/node-ts-generator init
+node-ts-generator init <project-name>
 ```
 
 🔥 Congratulations, you have created a node backend project with Typescript, ESLint and Prettier preconfigured.
