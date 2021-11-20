@@ -12,9 +12,9 @@ Anyone can contribute this project (https://github.com/mohaimin95/node-ts-genera
 
 - Predefined folder structure inspired from the Node JS experts.
 - Typescript preconfigured.
-- ESLint configured which enhances code quality and removal of unwanted codes.
+- ESLint configured which enhances code quality and prevents unwanted codes.
 - Prettier configured which ensures the better formatted code.
-- Easiely configurable.
+- Easily configurable.
 
 ## Installation
 
@@ -34,10 +34,8 @@ node-ts-generator init <project-name>
 
 ## What's next?
 
-1. Rename your project name in `package.json`
-2. Install all dependencies using `npm i`
-3. Create `.env` file in root directory of your application and copy all from `.env.example` file to `.env` file.
-4. Start your application in development mode using `npm run start:dev`.
+1. Install all dependencies using `npm i`.
+2. Start your application in development mode using `npm run start:dev`.
 
 ## Building the application
 
@@ -50,3 +48,5 @@ npm run build
 ```
 npm run build && npm start
 ```
+
+### Happy coding 🔥

@@ -3,7 +3,7 @@ const yargs = require("yargs")
 const commands = require("./src/constants/commands");
 const scaffoldApp = require("./src/services/scaffold-app.service")
 
-const [operation = '',appName=''] = yargs.argv._;
+const [operation = '', appName = ''] = yargs.argv._;
 
 switch (operation.toLowerCase()) {
     case commands.INIT:
@@ -14,11 +14,7 @@ switch (operation.toLowerCase()) {
         })
         break;
 
-    case '':
-        console.log("Missing command");
-        break;
-
     default:
-        console.error("Invalid command");
+        console.error("Invalid command, to create an app use `node-ts-generator init <app_name>`");
         break;
 }
