@@ -1,13 +1,10 @@
 {
   "name": "@mohaimin95/node-ts-generator",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.0.1",
+  "description": "Generate node js project with ease",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "bin": {
-    "node-ts": "./index.js"
+    "node-ts-generator": "./index.js"
   },
   "author": "Abdul Mohaimin",
   "license": "ISC",
