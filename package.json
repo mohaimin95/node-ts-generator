@@ -1,6 +1,6 @@
 {
   "name": "@mohaimin95/node-ts-generator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generate node js project with ease",
   "main": "index.js",
   "bin": {
