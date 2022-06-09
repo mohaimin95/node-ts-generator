@@ -1,8 +1,8 @@
-# Node TS (Typescript + ESLint + Prettier)
+# Node TS (Typescript + ESLint + Prettier + Husky precommit hooks)
 
 ## Generate node js project with ease ✨
 
-This library generates a node JS backend application with Typescript, ESLint, Prettier preconfigured. It enables you/team to write a good looking code with good quality.
+This library generates a node JS backend application with Typescript, ESLint, Prettier, Husky precommit hooks preconfigured. It enables you/team to write a good looking code with good quality.
 
 ## Contribution
 
@@ -14,6 +14,7 @@ Anyone can contribute this project (https://github.com/mohaimin95/node-ts-genera
 - Typescript preconfigured.
 - ESLint configured which enhances code quality and prevents unwanted codes.
 - Prettier configured which ensures the better formatted code.
+- Husky precommit hooks preconfigured which check for lint errors before committing the code.
 - Easily configurable.
 
 ## Installation
@@ -30,7 +31,7 @@ Create a project folder and generate the application using the command below
 node-ts-generator init <project-name>
 ```
 
-🔥 Congratulations, you have created a node backend project with Typescript, ESLint and Prettier preconfigured.
+🔥 Congratulations, you have created a node backend project with Typescript, ESLint, Prettier and husky precommit hooks preconfigured.
 
 ## What's next?
 
