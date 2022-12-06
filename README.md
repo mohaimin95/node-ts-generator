@@ -1,6 +1,6 @@
 # Node TS (Typescript + ESLint + Prettier + Husky precommit hooks)
 
-## Whats new in 1.1 [2022-12-06] ✨
+## Whats new in 1.1.0 [2022-12-06] ✨
 - Added tsc-alias [Now supports path aliases 😍].
 - Added Dockerfile and .dockerignore file.
 - Updated dependencies and devDependencies to the latest versions.
