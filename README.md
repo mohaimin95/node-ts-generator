@@ -1,5 +1,11 @@
 # Node TS (Typescript + ESLint + Prettier + Husky precommit hooks)
 
+## Whats new in 1.0.0 [2022-12-06]
+- Added tsc-alias [Now supports path aliases 😍]
+- Added Dockerfile and .dockerignore file
+- Updated dependencies and devDependencies to the latest versions
+- Changed command "npm start "
+
 ## Generate node js project with ease ✨
 
 This library generates a node JS backend application with Typescript, ESLint, Prettier, Husky precommit hooks preconfigured. It enables you/team to write a good looking code with good quality.
