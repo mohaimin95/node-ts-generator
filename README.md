@@ -1,10 +1,10 @@
 # Node TS (Typescript + ESLint + Prettier + Husky precommit hooks)
 
-## Whats new in 1.0.0 [2022-12-06]
-- Added tsc-alias [Now supports path aliases 😍]
-- Added Dockerfile and .dockerignore file
-- Updated dependencies and devDependencies to the latest versions
-- Changed command "npm start "
+## Whats new in 1.1 [2022-12-06] ✨
+- Added tsc-alias [Now supports path aliases 😍].
+- Added Dockerfile and .dockerignore file.
+- Updated dependencies and devDependencies to the latest versions.
+- Changed command `npm run start:dev` to `npm run dev`.
 
 ## Generate node js project with ease ✨
 
@@ -42,7 +42,7 @@ node-ts-generator init <project-name>
 ## What's next?
 
 1. Install all dependencies using `npm i`.
-2. Start your application in development mode using `npm run start:dev`.
+2. Start your application in development mode using `npm run dev`.
 
 ## Building the application
 
