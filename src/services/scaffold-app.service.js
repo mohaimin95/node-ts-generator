@@ -8,7 +8,7 @@ const scaffoldApp = async (appName) => {
     fs.copy(srcPath, destPath, (err) => {
         if (err) throw err;
         else {
-            console.log(`${appName} successfully created.`)
+            console.log(`${appName} successfully created ✨. \nExecute "cd ${appName} && git init && npm i" to get started.`)
         }
     });
 }

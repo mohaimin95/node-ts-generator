@@ -1,6 +1,10 @@
 # Node TS (Typescript + ESLint + Prettier + Husky precommit hooks)
 
-## Whats new in 1.1.0 [2022-12-06] ✨
+## Whats new in 1.1.1 [2023-11-23] ✨
+- Updated packages to latest.
+- Updated README.md.
+
+## Update 1.1.0 [2022-12-06]
 - Added tsc-alias [Now supports path aliases 😍].
 - Added Dockerfile and .dockerignore file.
 - Updated dependencies and devDependencies to the latest versions.
@@ -41,8 +45,12 @@ node-ts-generator init <project-name>
 
 ## What's next?
 
-1. Install all dependencies using `npm i`.
+1. Install all dependencies using `cd <appname> && git init && npm i`.
 2. Start your application in development mode using `npm run dev`.
+
+## Husky is not executable?
+
+- Run `chmod 777 .husky/*`.
 
 ## Building the application
 
