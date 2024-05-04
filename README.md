@@ -1,6 +1,6 @@
 # Node TS (Typescript + ESLint + Prettier + Webpack + Husky precommit hooks)
 
-## Whats new in v1.2 [2024-05-04] ✨
+## Whats new in v1.2.0 [2024-05-04] ✨
 - Added webpack for optimized build.
 - Changed npm to yarn in Dockerfile for faster docker builds.
 - Added rimraf package for universal delete command.
@@ -22,7 +22,7 @@ Feel free to contribute (https://github.com/mohaimin95/node-ts-generator)
 - Typescript preconfigured.
 - ESLint configured which enhances code quality and prevents unwanted codes.
 - Prettier configured which ensures the better formatted code.
-- Added webpack for the optimized build (Available from v1.2).
+- Added webpack for the optimized build (Available from v1.2.0).
 - Husky precommit hooks preconfigured which check for lint errors before committing the code.
 - Easily configurable.
 
