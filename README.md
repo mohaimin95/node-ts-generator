@@ -3,10 +3,10 @@
 ## Whats new in v1.2.0 [2024-05-04] ✨
 - Added webpack for optimized build.
 - Changed npm to yarn in Dockerfile for faster docker builds.
-- Added rimraf package for universal delete command.
+- Added rimraf package for universal delete command compatability.
 - Added /health-check endpoint.
 - Updated packages to latest.
-- Updated README.md.
+- Updated README file.
 
 ## Generate node js project with ease ✨
 
@@ -27,7 +27,21 @@ Feel free to contribute (https://github.com/mohaimin95/node-ts-generator)
 - Easily configurable.
 
 ## Installation
+### Method-1 via NPX [Recommended]:
+To create a project without installing it, execute the following command.
 
+#### Creating project
+```sh
+npx @mohaimin95/node-ts-generator init appnamehere
+```
+
+#### Installing dependencies
+
+```sh
+cd appnamehere && git init && npm i
+```
+
+### Method-2 via NPM:
 Install the package using the command below.
 
 ```sh
@@ -37,17 +51,17 @@ npm i -g @mohaimin95/node-ts-generator
 Create a project folder and generate the application using the command below
 
 ```sh
-node-ts-generator init <project-name>
+node-ts-generator init appnamehere
 ```
 
 🔥 Congratulations, you have created a node backend project with Typescript, ESLint, Prettier, Webpack and husky precommit hooks preconfigured.
 
 ## What's next?
 
-1. Install all dependencies using `cd <appname> && git init && npm i`.
+1. Install all dependencies using `cd appnamehere && git init && npm i`.
 2. Start your application in development mode using `npm run dev`.
 
-## For the cleaner install
+## For the cleaner dependencies install
 
 - Run `npm run install:clean`.
 
