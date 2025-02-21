@@ -1,3 +1,3 @@
-import HelloWorldService from './hello-world.service';
+import HelloWorldService from './helloWorld.service';
 
 export { HelloWorldService };

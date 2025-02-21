@@ -15,7 +15,7 @@ With this library, you can effortlessly generate a sleek Node.js backend applica
 - Easily configurable.
 - Hot reloading via nodemon.
 
-## Whats new in v1.2.3 [2025-02-21] ✨
+## Whats new in v1.2.4 [2025-02-21] ✨
 - Updated packages to latest.
 - Updated README file.
 
