@@ -15,7 +15,11 @@ With this library, you can effortlessly generate a sleek Node.js backend applica
 - Easily configurable.
 - Hot reloading via nodemon.
 
-## Whats new in v1.2.0 [2024-05-04] ✨
+## Whats new in v1.2.3 [2025-02-21] ✨
+- Updated packages to latest.
+- Updated README file.
+
+## Whats new in v1.2.0 [2024-05-04]
 - Added webpack for optimized build.
 - Changed npm to yarn in Dockerfile for faster docker builds.
 - Added rimraf package for universal delete command compatability.
