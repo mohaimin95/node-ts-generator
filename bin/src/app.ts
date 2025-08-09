@@ -1,9 +1,10 @@
-import express, { Express } from 'express';
+import routes from "@routes";
+import express, { Express } from "express";
 
 const app: Express = express();
 
-app.get('/health-check', (__, res) => {
-  res.send('OK');
-});
+// Middleware to parse JSON bodies
+app.use(express.json());
+app.use("/", routes);
 
 export default app;

@@ -1,3 +1,1 @@
-import HelloWorldService from './hello-world.service';
-
-export { HelloWorldService };
+export { default as HelloWorldService } from "./helloWorld.service";

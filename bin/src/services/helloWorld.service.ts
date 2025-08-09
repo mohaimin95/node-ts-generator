@@ -1,5 +1,7 @@
 export default class HelloWorldService {
-  static getHelloWorld() {
-    return 'Hello World';
+  static getGreetings() {
+    return {
+      message: "Happy coding 🔥",
+    };
   }
 }

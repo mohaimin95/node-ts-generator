@@ -1,99 +1,102 @@
-# Node TS (Typescript + ESLint + Prettier + Webpack + Husky precommit hooks) 🚀
+# Node TS (TypeScript + ESLint + Prettier + Webpack + Husky Hooks)
 
-## Generate node js project with ease ✨
+## Overview
 
-With this library, you can effortlessly generate a sleek Node.js backend application complete with TypeScript, ESLint, Prettier, Webpack, and Husky pre-commit hooks all set up and ready to go. Say goodbye to messy code and hello to a more polished and high-quality development experience for you and your team.
+Node TS provides a quick and efficient way to generate a fully configured Node.js backend application.  
+It includes **TypeScript**, **ESLint**, **Prettier**, **Webpack**, and **Husky** (pre-commit hook) out of the box, enabling developers to start with a clean, structured, and production-ready setup.  
+This eliminates the need for repetitive setup tasks and ensures consistent code quality across teams.
+
+---
 
 ## Features
 
-- Predefined folder structure inspired from the Node JS experts.
-- Typescript preconfigured.
-- ESLint configured which enhances code quality and prevents unwanted codes.
-- Prettier configured which ensures the better formatted code.
-- Added webpack for the optimized build (Available from v1.2.0).
-- Husky precommit hooks preconfigured which check for lint errors before committing the code.
-- Easily configurable.
-- Hot reloading via nodemon.
+- **Predefined folder structure** following best practices from experienced Node.js developers.
+- **TypeScript** with built-in path alias support for cleaner imports.
+- **ESLint** configured to enforce high-quality coding standards and prevent unwanted code patterns.
+- **Prettier** for consistent code formatting.
+- **Webpack** for optimized builds (introduced in v1.2.0).
+- **Husky** pre-commit hook preconfigured to run lint checks before committing code.
+- **Hot reloading** via Nodemon for faster development feedback loops.
+- **Dockerfile** included for containerization support.
+- Fully **customizable** configuration.
 
-## Whats new in v1.2.3 [2025-02-21] ✨
-- Updated packages to latest.
-- Updated README file.
+---
 
-## Whats new in v1.2.0 [2024-05-04]
-- Added webpack for optimized build.
-- Changed npm to yarn in Dockerfile for faster docker builds.
-- Added rimraf package for universal delete command compatability.
-- Added /health-check endpoint.
-- Updated packages to latest.
-- Updated README file.
+## What's New in v1.2.5 [2025-08-09]
+
+- Enhanced ESLint and Prettier configurations for improved code quality and consistency.
+- Added `.vscode/launch.json` and enabled source maps for a smoother debugging experience.
+- Upgraded all dependencies to the latest stable versions.
+- Updated `README.md` for improved clarity and accuracy.
+
+---
 
 ## Installation
-### Method-1 via NPX [Recommended]:
-To create a project without installing it, execute the following command.
 
-#### Creating project
+### Create a Project (via NPM)
+
+To create a project,
 ```sh
-npx @mohaimin95/node-ts-generator init appnamehere
+npx @mohaimin95/node-ts-generator init <app-name>
 ```
 
-#### Installing dependencies
-
+### Install Dependencies
 ```sh
-cd appnamehere && git init && npm i
+cd <app-name> && npm install
 ```
 
-### Method-2 via NPM:
-Install the package using the command below.
+Once done, you have a Node.js backend project with TypeScript, ESLint, Prettier, Webpack, and Husky preconfigured.
 
-#### Installation
+---
+
+## Next Steps
+
+1. Install dependencies:
+   ```sh
+   cd <app-name> && npm install
+   ```
+2. Start the application in development mode:
+   ```sh
+   npm run dev
+   ```
+
+---
+
+## Additional Commands
+
+**Clean Install Dependencies**
 ```sh
-npm i -g @mohaimin95/node-ts-generator
+npm run install:clean
 ```
-#### Creating the project
-Create a project folder and generate the application using the command below
 
+**Fix Husky Permission Issues**
 ```sh
-node-ts-generator init appnamehere
+chmod 777 .husky/*
 ```
 
-#### Installing dependencies
-
+**Start in Development Mode**
 ```sh
-cd appnamehere && git init && npm i
-```
-🔥 Congratulations, you have created a node backend project with Typescript, ESLint, Prettier, Webpack and husky precommit hooks preconfigured.
-
-## What's next?
-
-1. Install all dependencies using `cd appnamehere && git init && npm i`.
-2. Start your application in development mode using `npm run dev`.
-
-## For the cleaner dependencies install
-
-- Run `npm run install:clean`.
-
-## Husky is not executable?
-
-- Run `chmod 777 .husky/*`.
-
-## Starting application in development mode
-
-```
 npm run dev
 ```
 
-## Building the application
-
-```
+**Build the Application**
+```sh
 npm run build
 ```
-## Starting application in production mode
 
-```
-npm run build && npm start
-```
+---
+
 ## Contribution
 
-Feel free to contribute 🤝 (https://github.com/mohaimin95/node-ts-generator).
+Contributions are welcome.  
+Fork the repository, make your changes, and submit a pull request via:  
+[GitHub – mohaimin95/node-ts-generator](https://github.com/mohaimin95/node-ts-generator)
 
-### Happy coding 🔥
+---
+
+## Connect
+
+**Abdul Mohaimin**  
+[Portfolio](https://mohaimin95.github.io)
+
+---

@@ -1,31 +1,33 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable prettier/prettier */
 const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-    mode: 'production', // or 'development' for development mode
-    externalsPresets: { node: true }, // in order to ignore built-in modules like path, fs, etc.
+    mode: 'production', // or 'development'
+    externalsPresets: { node: true },
     externals: [nodeExternals()],
-    entry: './index.ts', // entry file of your project
+    entry: './index.ts',
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'commonjs',
-
     },
     resolve: {
-        extensions: ['.ts', '.js'], // resolve these extensions
+        extensions: ['.ts', '.js'],
         plugins: [
-            new TsconfigPathsPlugin(), // resolve path aliases using tsconfig.json
+            new TsconfigPathsPlugin({
+                configFile: path.resolve(__dirname, 'tsconfig.build.json') // 👈 specify build config
+            }),
         ],
     },
     module: {
         rules: [
             {
-                test: /\.ts$/, // handle TypeScript files
-                use: 'ts-loader', // use ts-loader for TypeScript compilation
+                test: /\.ts$/,
+                loader: 'ts-loader',
+                options: {
+                    configFile: path.resolve(__dirname, 'tsconfig.build.json') // 👈 specify build config
+                },
                 exclude: /node_modules/,
             },
         ],

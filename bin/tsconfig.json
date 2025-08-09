@@ -9,8 +9,28 @@
     "strict": true,
     "baseUrl": ".",
     "skipLibCheck": true,
+    "sourceMap": true,
     "paths": {
-      "@services/*": ["./src/services/*"]
-    }
-  }
+      "@services": [
+        "./src/services/index.ts"
+      ],
+      "@controllers": [
+        "./src/controllers/index.ts"
+      ],
+      "@routes": [
+        "./src/routes/index.ts"
+      ],
+    },
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/__tests__",
+    "src/__mocks__",
+    "src/**/*.test.ts",
+    "src/**/*.spec.ts",
+    "webpack.config.js",
+    "jest.config.js",
+    "eslint.config.js",
+  ]
 }
