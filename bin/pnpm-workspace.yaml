@@ -1,0 +1,8 @@
+# pnpm blocks dependency build scripts by default. esbuild needs its
+# postinstall script to provide the native binary used by the toolchain.
+allowBuilds:
+  esbuild: true
+
+minimumReleaseAgeExclude:
+  - schema-utils@4.5.0
+  - webpack@5.111.0

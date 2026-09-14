@@ -4,3 +4,5 @@ node_modules
 bin/package-lock.json
 bin/node_modules
 bin/dist
+test-app
+pnpm-lock.yaml

@@ -1,4 +1,3 @@
-/* eslint-disable*/
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -11,14 +10,12 @@ export default defineConfig([
       "webpack.config.js",
       "dist/**/*",
       "node_modules/**/*",
-      "eslint.config.js",
+      "eslint.config.*",
     ],
   },
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
-    plugins: { js },
-
-    extends: ["js/recommended"],
+    ...js.configs.recommended,
     languageOptions: {
       globals: globals.node,
       parserOptions: {
@@ -30,6 +27,6 @@ export default defineConfig([
       "no-console": "warn",
     },
   },
-  tseslint.configs.recommended as any,
+  ...tseslint.configs.recommended,
   eslintPluginPrettierRecommended,
 ]);
