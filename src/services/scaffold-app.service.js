@@ -9,9 +9,11 @@ const scaffoldApp = async (appName) => {
         filter: (source) => {
             const relativePath = path.relative(srcPath, source)
             const ignoredPath = /(^|[\\/])(node_modules|dist|\.git)([\\/]|$)/
-            return !ignoredPath.test(relativePath) && !/(^|[\\/])(package-lock\.json|pnpm-lock\.yaml)$/.test(relativePath)
+            return !ignoredPath.test(relativePath) &&
+                !/(^|[\\/])(package-lock\.json|pnpm-lock\.yaml|gitignore)$/.test(relativePath)
         },
     });
+    await fs.copy(path.join(srcPath, "gitignore"), path.join(destPath, ".gitignore"));
 }
 
 module.exports = scaffoldApp;

@@ -1,1 +1,1 @@
-export { default as HelloWorldService } from "./helloWorld.service";
+export { default as HealthCheckService } from "./healthCheck.service";

@@ -1,1 +1,1 @@
-export { default as HelloWorldController } from "./helloWorld.controller";
+export { default as HealthCheckController } from "./healthCheck.controller";

@@ -1,8 +1,8 @@
 import { Router } from "express";
-import helloWorldRouter from "./helloWorld.router";
+import healthCheckRouter from "./healthCheck.router";
 
 const routes = Router();
 
-routes.use("/helloWorld", helloWorldRouter);
+routes.use("/healthCheck", healthCheckRouter);
 
 export default routes;

@@ -1,9 +1,9 @@
-# Node TS (TypeScript + ESLint + Prettier + Webpack + Husky Hooks)
+# Node TS (TypeScript + ESLint + Prettier + Webpack)
 
 ## Overview
 
 Node TS provides a quick and efficient way to generate a fully configured Node.js backend application.  
-It includes **TypeScript**, **ESLint**, **Prettier**, **Webpack**, and **Husky** (pre-commit hook) out of the box, enabling developers to start with a clean, structured, and production-ready setup.  
+It includes **TypeScript**, **ESLint**, **Prettier**, and **Webpack** out of the box, enabling developers to start with a clean, structured, and production-ready setup.
 This eliminates the need for repetitive setup tasks and ensures consistent code quality across teams.
 
 ---
@@ -15,7 +15,6 @@ This eliminates the need for repetitive setup tasks and ensures consistent code 
 - **ESLint** configured to enforce high-quality coding standards and prevent unwanted code patterns.
 - **Prettier** for consistent code formatting.
 - **Webpack** for optimized builds (introduced in v1.2.0).
-- **Husky** pre-commit hook preconfigured to run lint checks before committing code.
 - **Hot reloading** via Nodemon for faster development feedback loops.
 - **Dockerfile** included for containerization support.
 - Fully **customizable** configuration.
@@ -67,11 +66,6 @@ Once done, you have a Node.js backend project with TypeScript, ESLint, Prettier,
 **Clean Install Dependencies**
 ```sh
 npm run install:clean
-```
-
-**Fix Husky Permission Issues**
-```sh
-chmod 777 .husky/*
 ```
 
 **Start in Development Mode**
