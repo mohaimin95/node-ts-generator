@@ -6,7 +6,9 @@ const scaffoldApp = require("./src/services/scaffold-app.service")
 const [operation = '', appName = ''] = yargs.argv._;
 const successCommand = `
 Project "${appName}" has been successfully generated ✨. \n
-To continue working, run "cd ${appName} && git init && npm i"\n
+To continue working, run one of:\n
+  cd ${appName} && git init && npm install\n
+  cd ${appName} && git init && pnpm install\n
 Thanks 🤝.
 
 Happy coding 🔥

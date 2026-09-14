@@ -32,16 +32,31 @@ This eliminates the need for repetitive setup tasks and ensures consistent code 
 
 ## Installation
 
-### Create a Project (via NPM)
+### Create a Project
 
 To create a project,
 ```sh
 npx @mohaimin95/node-ts-generator init <app-name>
 ```
 
+Or with pnpm:
+
+```sh
+pnpm dlx @mohaimin95/node-ts-generator init <app-name>
+```
+
 ### Install Dependencies
+
+Using npm:
+
 ```sh
 cd <app-name> && npm install
+```
+
+Using pnpm:
+
+```sh
+cd <app-name> && pnpm install
 ```
 
 Once done, you have a Node.js backend project with TypeScript, ESLint, Prettier, Webpack, and Husky preconfigured.
@@ -54,28 +69,43 @@ Once done, you have a Node.js backend project with TypeScript, ESLint, Prettier,
    ```sh
    cd <app-name> && npm install
    ```
+   Or:
+   ```sh
+   cd <app-name> && pnpm install
+   ```
 2. Start the application in development mode:
    ```sh
    npm run dev
+   ```
+   Or:
+   ```sh
+   pnpm dev
    ```
 
 ---
 
 ## Additional Commands
 
-**Clean Install Dependencies**
-```sh
-npm run install:clean
-```
-
 **Start in Development Mode**
 ```sh
 npm run dev
 ```
 
+Or:
+
+```sh
+pnpm dev
+```
+
 **Build the Application**
 ```sh
 npm run build
+```
+
+Or:
+
+```sh
+pnpm build
 ```
 
 ---
