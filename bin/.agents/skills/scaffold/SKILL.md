@@ -14,7 +14,7 @@ Use this skill when the user asks to scaffold, generate, or add a new applicatio
 - If the artifact type is ambiguous, ask the user to choose one of the supported types.
 - Accept common singular/plural forms and minor spelling variations, but do not guess a materially different type.
 
-## Workflow
+## AI rules and workflow
 
 1. Inspect the repository before writing anything. Find the source root, the target directory, its barrel file (usually `index.ts`), path aliases, and at least one nearby example. Follow the project's existing TypeScript, naming, export, import, and formatting conventions.
 2. Normalize the requested name for the repository's convention. Keep the file name in the project's usual casing (for example, `userProfile.service.ts`) and use the corresponding identifier casing (for example, `UserProfileService`). Do not silently change a name that would collide with an existing file or symbol.
