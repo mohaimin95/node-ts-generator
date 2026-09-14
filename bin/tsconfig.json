@@ -14,6 +14,8 @@
       "@services/*": ["./src/services/*"],
       "@controllers": ["./src/controllers/index.ts"],
       "@controllers/*": ["./src/controllers/*"],
+      "@middlewares": ["./src/middlewares/index.ts"],
+      "@middlewares/*": ["./src/middlewares/*"],
       "@routes": ["./src/routes/index.ts"],
       "@routes/*": ["./src/routes/*"]
     }

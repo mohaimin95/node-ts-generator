@@ -17,16 +17,18 @@ This eliminates the need for repetitive setup tasks and ensures consistent code 
 - **Webpack** for optimized builds (introduced in v1.2.0).
 - **Hot reloading** via Nodemon for faster development feedback loops.
 - **Dockerfile** included for containerization support.
+- **AI scaffold skill** for agent-assisted creation of controllers, routes, services, models, helpers, and middleware.
 - Fully **customizable** configuration.
 
 ---
 
-## What's New in v1.2.5 [2025-08-09]
+## What's New in This Version
 
-- Enhanced ESLint and Prettier configurations for improved code quality and consistency.
-- Added `.vscode/launch.json` and enabled source maps for a smoother debugging experience.
+- Added support for creating and running projects with both **npm** and **pnpm**.
+- Added reusable Express error middleware and an `@middlewares` path alias.
+- Added an AI-ready scaffold skill for generating controllers, routes, services, models, helpers, and middleware.
+- Updated the project structure, scripts, linting configuration, and documentation.
 - Upgraded all dependencies to the latest stable versions.
-- Updated `README.md` for improved clarity and accuracy.
 
 ---
 
@@ -107,6 +109,38 @@ Or:
 ```sh
 pnpm build
 ```
+
+---
+
+## AI Scaffold Skill
+
+Every generated project includes an agent skill at:
+
+```text
+.agents/skills/scaffold/SKILL.md
+```
+
+The skill guides compatible AI coding agents to create application artifacts that match the generated project's existing structure and conventions. It can scaffold:
+
+- Controllers
+- Routes
+- Services
+- Models
+- Helpers
+- Middleware
+
+It also updates the relevant barrel exports, registers active routes when appropriate, preserves existing files, and runs the narrowest available validation command.
+
+Example requests:
+
+```text
+Scaffold a User service.
+Add authentication middleware.
+Create and register a users route.
+Generate a User controller and export it from the controllers barrel.
+```
+
+Include both the artifact type and name in the request. If either is unclear, the skill asks for the missing information before changing files.
 
 ---
 
