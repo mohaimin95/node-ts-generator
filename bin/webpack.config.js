@@ -6,7 +6,7 @@ module.exports = {
     mode: 'production', // or 'development'
     externalsPresets: { node: true },
     externals: [nodeExternals()],
-    entry: './index.ts',
+    entry: './src/index.ts',
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),

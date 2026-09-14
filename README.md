@@ -1,135 +1,110 @@
-# Node TS (TypeScript + ESLint + Prettier + Webpack)
+# Node TypeScript Generator
 
-## Overview
-
-Node TS provides a quick and efficient way to generate a fully configured Node.js backend application.  
-It includes **TypeScript**, **ESLint**, **Prettier**, and **Webpack** out of the box, enabling developers to start with a clean, structured, and production-ready setup.
-This eliminates the need for repetitive setup tasks and ensures consistent code quality across teams.
-
----
+Generate a structured Express backend with TypeScript, ESLint, Prettier, Webpack, path aliases, centralized error handling, and an AI scaffold skill.
 
 ## Features
 
-- **Predefined folder structure** following best practices from experienced Node.js developers.
-- **TypeScript** with built-in path alias support for cleaner imports.
-- **ESLint** configured to enforce high-quality coding standards and prevent unwanted code patterns.
-- **Prettier** for consistent code formatting.
-- **Webpack** for optimized builds (introduced in v1.2.0).
-- **Hot reloading** via Nodemon for faster development feedback loops.
-- **Dockerfile** included for containerization support.
-- **AI scaffold skill** for agent-assisted creation of controllers, routes, services, models, helpers, and middleware.
-- Fully **customizable** configuration.
-
----
+- Express 5 application written in strict TypeScript
+- Fast development mode with `tsx` file watching
+- ESLint and Prettier configuration
+- Webpack production bundle
+- Path aliases for controllers, middleware, routes, and services
+- Health-check endpoint and centralized JSON error handling
+- Support for both npm and pnpm
+- Dockerfile and VS Code launch configuration
+- AI scaffold skill for adding project artifacts consistently
 
 ## What's New in This Version
 
-- Added support for creating and running projects with both **npm** and **pnpm**.
-- Added reusable Express error middleware and an `@middlewares` path alias.
-- Added an AI-ready scaffold skill for generating controllers, routes, services, models, helpers, and middleware.
-- Updated the project structure, scripts, linting configuration, and documentation.
-- Upgraded all dependencies to the latest stable versions.
+- Added npm and pnpm support throughout project setup and scripts.
+- Added a generated `.gitignore` with Node.js, build, environment, and Husky exclusions.
+- Replaced the Hello World example with a health-check controller, route, and service.
+- Added reusable Express error middleware and the `@middlewares` path alias.
+- Moved the generated application entry point to `src/index.ts`.
+- Added an AI scaffold skill for controllers, routes, services, models, helpers, and middleware.
+- Added a reader-friendly README to every generated project.
+- Updated dependencies, project structure, linting, scripts, and documentation.
 
----
+## Create a Project
 
-## Installation
+With npm:
 
-### Create a Project
-
-To create a project,
 ```sh
 npx @mohaimin95/node-ts-generator init <app-name>
-```
-
-Or with pnpm:
-
-```sh
-pnpm dlx @mohaimin95/node-ts-generator init <app-name>
-```
-
-### Install Dependencies
-
-Using npm:
-
-```sh
-cd <app-name> && npm install
-```
-
-Using pnpm:
-
-```sh
-cd <app-name> && pnpm install
-```
-
-Once done, you have a Node.js backend project with TypeScript, ESLint, Prettier, Webpack, and Husky preconfigured.
-
----
-
-## Next Steps
-
-1. Install dependencies:
-   ```sh
-   cd <app-name> && npm install
-   ```
-   Or:
-   ```sh
-   cd <app-name> && pnpm install
-   ```
-2. Start the application in development mode:
-   ```sh
-   npm run dev
-   ```
-   Or:
-   ```sh
-   pnpm dev
-   ```
-
----
-
-## Additional Commands
-
-**Start in Development Mode**
-```sh
+cd <app-name>
+npm install
 npm run dev
 ```
 
-Or:
+With pnpm:
 
 ```sh
-pnpm dev
+pnpm dlx @mohaimin95/node-ts-generator init <app-name>
+cd <app-name>
+pnpm install
+pnpm run dev
 ```
 
-**Build the Application**
-```sh
-npm run build
+Copy `.env.example` to `.env` if needed, then open the default health-check endpoint:
+
+```text
+http://localhost:3000/healthCheck
 ```
 
-Or:
+Expected response:
 
-```sh
-pnpm build
+```json
+{
+  "status": "OK"
+}
 ```
 
----
+## Generated Project
+
+```text
+<app-name>/
+├── .agents/skills/scaffold/   # AI scaffold skill and rules
+├── pre-start/                 # Startup and environment configuration
+├── src/
+│   ├── controllers/           # HTTP request handlers
+│   ├── middlewares/           # Express middleware
+│   ├── routes/                # Route definitions
+│   ├── services/              # Application logic
+│   ├── app.ts                 # Express application setup
+│   └── index.ts               # Application entry point
+├── README.md                  # Generated-project setup guide
+├── eslint.config.ts
+├── tsconfig.json
+└── webpack.config.js
+```
+
+The generated README contains environment setup, available commands, production build instructions, project structure, error-handling guidance, and AI scaffold examples.
+
+## Common Commands
+
+Run scripts with `npm run <script>` or `pnpm run <script>`.
+
+| Script | Description |
+| --- | --- |
+| `dev` | Start development mode with file watching. |
+| `dev:inspect` | Start development mode with the Node.js inspector. |
+| `typecheck` | Validate TypeScript without emitting files. |
+| `lint` | Check source files with ESLint. |
+| `lint:fix` | Fix automatically repairable lint issues. |
+| `format` | Format project files with Prettier. |
+| `format:check` | Check formatting without changing files. |
+| `build` | Validate and create the production bundle. |
+| `start` | Run `dist/index.js`. |
 
 ## AI Scaffold Skill
 
-Every generated project includes an agent skill at:
+Every generated project includes:
 
 ```text
 .agents/skills/scaffold/SKILL.md
 ```
 
-The skill guides compatible AI coding agents to create application artifacts that match the generated project's existing structure and conventions. It can scaffold:
-
-- Controllers
-- Routes
-- Services
-- Models
-- Helpers
-- Middleware
-
-It also updates the relevant barrel exports, registers active routes when appropriate, preserves existing files, and runs the narrowest available validation command.
+Compatible AI coding agents can use the skill to create controllers, routes, services, models, helpers, and middleware while following the generated project's conventions. The skill contains the complete AI rules for naming, exports, route registration, file safety, and validation.
 
 Example requests:
 
@@ -140,21 +115,23 @@ Create and register a users route.
 Generate a User controller and export it from the controllers barrel.
 ```
 
-Include both the artifact type and name in the request. If either is unclear, the skill asks for the missing information before changing files.
+Include the artifact type and name in the request. If the agent does not discover the skill automatically, direct it to `.agents/skills/scaffold/SKILL.md`.
 
----
+## Work on the Generator Locally
 
-## Contribution
+```sh
+git clone https://github.com/mohaimin95/node-ts-generator.git
+cd node-ts-generator
+npm install
+node index.js init test-app
+```
 
-Contributions are welcome.  
-Fork the repository, make your changes, and submit a pull request via:  
-[GitHub – mohaimin95/node-ts-generator](https://github.com/mohaimin95/node-ts-generator)
+The generated template lives in `bin`, and the CLI scaffold logic lives in `src/services/scaffold-app.service.js`.
 
----
+## Contributing
 
-## Connect
+Contributions are welcome. Fork the repository, make your changes, and open a pull request on [GitHub](https://github.com/mohaimin95/node-ts-generator).
 
-**Abdul Mohaimin**  
-[Portfolio](https://mohaimin95.github.io)
+## Author
 
----
+Created by **Abdul Mohaimin**. Visit the [portfolio](https://mohaimin95.github.io).
