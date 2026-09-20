@@ -1,12 +1,12 @@
 # Node TypeScript Generator
 
-Generate a structured Express backend with TypeScript, ESLint, Prettier, Webpack, path aliases, centralized error handling, and an AI scaffold skill.
+Generate a structured Express backend with TypeScript, Oxlint, Prettier, Webpack, path aliases, centralized error handling, and an AI scaffold skill.
 
 ## Features
 
 - Express 5 application written in strict TypeScript
 - Fast development mode with `tsx` file watching
-- ESLint and Prettier configuration
+- Oxlint and Prettier configuration
 - Webpack production bundle
 - Path aliases for controllers, middleware, routes, and services
 - Health-check endpoint and centralized JSON error handling
@@ -73,7 +73,6 @@ Expected response:
 │   ├── app.ts                 # Express application setup
 │   └── index.ts               # Application entry point
 ├── README.md                  # Generated-project setup guide
-├── eslint.config.ts
 ├── tsconfig.json
 └── webpack.config.js
 ```
@@ -89,7 +88,7 @@ Run scripts with `npm run <script>` or `pnpm run <script>`.
 | `dev` | Start development mode with file watching. |
 | `dev:inspect` | Start development mode with the Node.js inspector. |
 | `typecheck` | Validate TypeScript without emitting files. |
-| `lint` | Check source files with ESLint. |
+| `lint` | Check source files with Oxlint. |
 | `lint:fix` | Fix automatically repairable lint issues. |
 | `format` | Format project files with Prettier. |
 | `format:check` | Check formatting without changing files. |

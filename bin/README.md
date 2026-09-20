@@ -1,6 +1,6 @@
 # Node TypeScript API Starter
 
-A ready-to-use Express API starter with TypeScript, ESLint, Prettier, Webpack, environment configuration, path aliases, centralized error handling, and an AI scaffold skill.
+A ready-to-use Express API starter with TypeScript, Oxlint, Prettier, Webpack, environment configuration, path aliases, centralized error handling, and an AI scaffold skill.
 
 ## Requirements
 
@@ -67,7 +67,7 @@ Run each script with `npm run <script>` or `pnpm run <script>`.
 | `dev:inspect` | Start development mode with the Node.js inspector enabled. |
 | `checkts` | Check TypeScript types without producing output. |
 | `typecheck` | Check TypeScript types without producing output. |
-| `lint` | Check the source code with ESLint. |
+| `lint` | Check the source code with Oxlint. |
 | `lint:fix` | Fix automatically repairable lint issues. |
 | `format` | Format supported project files with Prettier. |
 | `format:check` | Check formatting without changing files. |
@@ -105,7 +105,6 @@ pnpm start
 │   ├── services/              # Application and business logic
 │   ├── app.ts                 # Express application setup
 │   └── index.ts               # Application entry point
-├── eslint.config.ts           # ESLint configuration
 ├── tsconfig.json              # TypeScript configuration and path aliases
 └── webpack.config.js          # Production bundling configuration
 ```
